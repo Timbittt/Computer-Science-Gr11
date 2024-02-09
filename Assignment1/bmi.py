@@ -7,7 +7,7 @@
 #OVERVIEW:  Converts inputted height and weigh, converts to bmi and outputs the result
 
 # get type of units from user
-units = input("Enter type of units (M or Metric for Metric, I or Imperial for Imperial)")
+units = input("Enter type of units (M or Metric for Metric, I or Imperial for Imperial), and press enter:")
 
 # prompt and get input based off of system
 if units == "M" or units == "Metric":
