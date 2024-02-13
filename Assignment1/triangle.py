@@ -14,13 +14,4 @@ print("")
 
 # Use 2 nested for loops in order to print the triangle
 for i in range(sideLength):
-
-    # Initializes the variable that will hold each row
-    row = ""
-
-    # Adds sideLength number of stars to the variable that holds the row value
-    for j in range(i):
-        row += " * "
-
-    # Prints each row
-    print(row)
+    print(" * " * i)

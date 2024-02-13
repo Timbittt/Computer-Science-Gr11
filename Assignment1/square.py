@@ -14,13 +14,5 @@ print("")
 
 # Use 2 nested for loops in order to print a square with sideLength width and height
 for i in range(sideLength):
-
-    # Initializes the variable that will hold each row
-    row = ""
-
-    # Adds sideLength number of stars to the variable that holds the row value
-    for j in range(sideLength):
-        row += " * "
-
-    # Prints each row
-    print(row)
+    # Prints each row with sideLength
+    print(" * " * sideLength)
