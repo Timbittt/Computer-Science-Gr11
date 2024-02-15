@@ -1,5 +1,3 @@
-### TODO: Make code more readable and optimized
-
 #NAME:  Timofiy Kharchuk
 #
 #STUDENT NUMBER:  1008424
@@ -8,21 +6,23 @@
 #
 #OVERVIEW:  Prints a multiplication table with side lengths of the input
 
-sideLength = int(input("Enter the end of the multiplication table"))
+                                                                        
+sideLength = int(
+    input("Enter the end of the multiplication table: ")
+    )                                                           # get input from the user
 
 for i in range(sideLength):
-    row = ""
+    row = ""                                                    # Initialize the variable that
+                                                                # stores the values being printed
     
-    for j in range(sideLength):
-        #FIXME: Padding very buggy + code hard to read and inefficient
-        value = str((i+1)*(j+1))
-        padding = int((len(str((sideLength**2))) - len(value))/2)
+    for j in range(sideLength):       
+        result = str((i+1)*(j+1))                               # Calculate the sum that to go in 
+                                                                # each 'cell' of the table.
+        
+        padding = len(str(sideLength**2))*" "                   # Find the amount of padding 
+                                                                # needed for the greatest value
 
-        if len(value) % 2 == 1:
-            value = " " * padding + value + " " * padding
-        else:
-            value = " " * (padding+1) + value + " " * padding
-         
-        row += value
+        row += padding[len(str(value))-1:] + value + padding    # Insert the padding into the row
+                                                                # currently being printed
 
-    print(row)
+    print(row)                                                  # Output the result
