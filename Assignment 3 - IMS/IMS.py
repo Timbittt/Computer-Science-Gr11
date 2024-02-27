@@ -10,21 +10,55 @@ print("Welcome to the IMS.")
 
 loop = True
 
-ids = []
-price = []
-desc = []
-stock = []
+itemIds = []
+itemPrices = []
+itemDescriptions = []
+itemStock = []
 
-def changePrice(id, newPrice):
-    price[id] = newPrice
-
-def changeDesc(id, newDesc):
-    desc[id] = newDesc
-
-def changeStock(id, stockAmount):
+def changePrice():
     return 0
 
-def changeId(oldId, newId):
+def changeDesc():
+    return 0
+
+def changeStock():
+    return 0
+
+def loadFile():
+    global itemIds
+    global itemPrices
+    global itemDescriptions
+    global itemStock
+    
+    itemIds = []
+    itemPrices = []
+    itemDescriptions = []
+    itemStock = []
+
+    dataFile = open("data.txt")
+
+    i = 0
+
+    while True:
+        line = dataFile.readline().rstrip('\n')
+
+        if line == "ENDENDEND":
+            break;
+        
+        match i % 4:
+            case 0:
+                itemIds.append(line)
+            case 1:
+                itemPrices.append(line)
+            case 2:
+                itemDescriptions.append(line)
+            case 3:
+                itemStock.append(line)
+
+        print(i)
+        i += 1
+
+def saveFile():
     return 0
 
 def quitProgram():
@@ -45,17 +79,24 @@ def checkInput(command):
             changeDesc()
         case 'st':
             changeStock()
-        case 'id':
-            changeId()
         case 'q':
             return quitProgram()
         case 'h':
             help()
+        case 'save':
+            saveFile()
+        case 'load':
+            loadFile()
         case _:
             commandNotFound()
-
-    
     return loop
+
+loadFile()
+print(*itemIds)
+print(*itemPrices)
+print(*itemDescriptions)
+print(*itemStock)
+
 
 while loop:
     loop = checkInput(input("Enter a command: "))
