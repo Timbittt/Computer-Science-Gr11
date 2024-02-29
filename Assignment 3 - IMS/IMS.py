@@ -96,9 +96,7 @@ def changeItemId():
     newID = input("Enter new item id: ")
     itemIds[itemIndex] = newID
     print("Done.")
-
-
-    
+   
 def loadFile():
     global itemIds
     global itemPrices
@@ -197,11 +195,6 @@ def checkInput():
     return loop
 
 loadFile()
-# print(*itemIds)
-# print(*itemPrices)
-# print(*itemDescriptions)
-# print(*itemStocks)
-
 
 while loop:
     loop = checkInput()
