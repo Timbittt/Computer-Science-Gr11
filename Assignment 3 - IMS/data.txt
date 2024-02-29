@@ -1,6 +1,29 @@
-id
-test1
-rock100hard rock1
-bnch5nice bench3
-pota8yukon gold24
+book
+15.99
+Hardcover fantasy novel with 350 pages
+20
+shirt
+24.50
+Cotton t-shirt with graphic print, size medium
+50
+headphones
+79.99
+Wireless noise-cancelling headphones with long battery life
+15
+laptop
+899.99
+High-performance laptop with 16GB RAM and 512GB SSD
+10
+coffeebeans
+12.99
+Organic fair-trade coffee beans, 1lb bag
+30
+guitar
+299.99
+Electric guitar with beginners kit and amplifier
+2
+orng
+5
+juicy orange
+25
 ENDENDEND
