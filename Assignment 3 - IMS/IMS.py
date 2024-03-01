@@ -195,6 +195,6 @@ def checkInput():
     return loop
 
 loadFile()
-
+            
 while loop:
     loop = checkInput()
